@@ -1,0 +1,22 @@
+def maxii(card,k):
+      # n=sum(card)
+      # if k>n:
+      #   return 0
+      total=sum(card)
+      windowsum=sum(card[:k])
+      maxscore=windowsum
+      # for i in range (k,n):
+      #   windowsum+=card[i]-card[i-k]
+      #   maxscore=max(maxscore,windowsum)
+
+      l=0
+      for r in range (k,len(card)):
+        windowsum+-card[l]+card[r]
+        maxscore=max(maxscore,windowsum)
+        l+=1
+      maxscore=total-(k-maxscore) 
+      return maxscore
+cardpoints=[1,2,3,4,5,6,1]
+k=3
+print(maxii(cardpoints,k))
+
